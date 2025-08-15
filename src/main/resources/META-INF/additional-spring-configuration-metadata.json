@@ -1,0 +1,14 @@
+{
+  "properties": [
+    {
+      "name": "swg.server.description",
+      "type": "java.lang.String",
+      "description": "A description for 'swg.server.description'"
+    },
+    {
+      "name": "swg.server.url",
+      "type": "java.lang.String",
+      "description": "A description for 'swg.server.url'"
+    }
+  ]
+}
