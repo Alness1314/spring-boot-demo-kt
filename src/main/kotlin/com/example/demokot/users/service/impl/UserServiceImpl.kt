@@ -20,7 +20,7 @@ import java.util.*
 class UserServiceImpl(
     private val userRepository: UserRepository
 ) : UserService {
-    val modelMapper = ModelMapper();
+    private val modelMapper = ModelMapper();
     val notFound = "Resource not found.";
 
     @PostConstruct
@@ -75,11 +75,11 @@ class UserServiceImpl(
         }
     }
 
-    fun mapperDto(source: UserEntity): UserResponse {
+    private fun mapperDto(source: UserEntity): UserResponse {
         return modelMapper.map(source, UserResponse::class.java)
     }
 
-    fun filterWithParameters(parameters: Map<String, String>): Specification<UserEntity>? {
+    private fun filterWithParameters(parameters: Map<String, String>): Specification<UserEntity>? {
         return UserSpecification().getSpecificationFilters(parameters)
     }
 

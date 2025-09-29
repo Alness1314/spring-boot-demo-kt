@@ -22,6 +22,11 @@ spring:
     hibernate:
       ddl-auto: none # Opciones: create, create-drop, update, validate, none
 
+  flyway:
+        enabled: true
+        baseline-on-migrate: true
+        locations: classpath:db/migration 
+
 #Open api swagger ui
 springdoc:
   api-docs:
@@ -36,3 +41,6 @@ swg:
   server:
     url: ${SERVER_URL}
     description: ${SERVER_DESCRIPTION}
+
+api:
+  prefix: ${API_PREFIX}

@@ -22,8 +22,8 @@ open class ModulesEntity(
     @Column(name = "title", nullable = false, unique = true, length = 128)
     var title: String,
 
-    @Column(name = "subTitle", nullable = true, length = 1024)
-    var subTitle: String,
+    @Column(name = "subtitle", nullable = true, length = 1024)
+    var subtitle: String,
 
     @Column(name = "path", nullable = false, length = 512)
     var path: String,
